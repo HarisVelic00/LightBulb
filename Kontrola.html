@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrola</title>
+    <link rel="stylesheet" href="kontrola.css">
+
+</head>
+
+<body>
+
+    <div class="slidercontainer">
+        <input type="range" min="1" max="100" class="slider" id="brightnessRange" onchange="promjeniSvjetlinu(this)">
+    </div>
+
+    <div class="switch">
+        <button class="btn" onclick="upaliSvjetlo()"></button>
+    </div>
+
+    <div class="funkcije">
+        <button id="dugmeBroj" type="submit" onclick="randomBroj()">Random broj</button>
+        <button id="dugmeString" type="submit" onclick="randomString()">Random string</button>
+        <form>
+            <input id="inputField" type="text" />
+            <input class="dugmeInput" type="submit" value="Submit" onclick="sendInput()" />
+        </form>
+    </div>
+
+
+    <audio id="audio" src="./Media/click.mp3" autostart="false"></audio>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="kontrola.js"></script>
+
+</body>
+
+</html>
